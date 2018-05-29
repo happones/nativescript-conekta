@@ -62,7 +62,7 @@ declare module io {
     export module conekta {
         export module conektasdk {
             export class Connection {
-                public request(param0: javautilList, param1: string): void;
+                public request(param0, param1: string): void;
                 public onRequestListener(param0: io.conekta.conektasdk.Connection.Request): void;
                 public constructor();
             }

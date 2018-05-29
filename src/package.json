@@ -1,5 +1,5 @@
 {
-    "name": "nativescript-conekta",
+    "name": "nativescript-conekta-sdk",
     "version": "0.1.0",
     "description": "Nativescript Plugin for payments Conekta.",
     "main": "conekta",

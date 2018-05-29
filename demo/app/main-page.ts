@@ -10,13 +10,13 @@ export function pageLoaded(args: observable.EventData) {
 }
 
 export function generateToken(args) {
-    let object = args.object.bindingContext
-    let module  = new HelloWorldModel()
+    let object = args.object.bindingContext;
+    let module  = new HelloWorldModel();
     module.conekta.createToken(object.card).then(response => {
-        alert(JSON.stringify(response))
+        alert('success: ' + JSON.stringify(response));
         args.object.bindingContext.set('token', response.id)
     }, error => {
-        alert(JSON.stringify(error))
+        alert('error: ' + JSON.stringify(error));
     })
 
 }

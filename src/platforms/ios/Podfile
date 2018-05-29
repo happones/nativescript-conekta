@@ -1,0 +1,1 @@
+pod 'Conekta', :git => 'https://github.com/happones/conekta-ios.git'

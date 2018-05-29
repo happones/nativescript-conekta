@@ -1,7 +1,7 @@
 //declare var io: any;
 import * as application from 'tns-core-modules/application'
 
-export class Conekta  {
+export class TNSConekta  {
    private conekta: any;
 
    constructor() {
@@ -16,13 +16,13 @@ export class Conekta  {
     }
 
     public createToken(params) {
-        let name = params.name || '';
-        let number = params.number || '';
-        let cvc = params.cvc || '';
-        let expiryMonth = params.expiry_month || '';
-        let expiryYear = params.expiry_year || '';
+        let name = params.name || 'name';
+        let number = params.number || 'number';
+        let cvc = params.cvc || 'cvc';
+        let expiryMonth = params.expiry_month || 'month';
+        let expiryYear = params.expiry_year || 'year';
 
-        let card = new io.conekta.conektasdk.Card(name, number, cvc, expiryMonth, expiryYear)
+        let card = new io.conekta.conektasdk.Card(name, number, cvc, expiryMonth, expiryYear);
 
         let token = new io.conekta.conektasdk.Token(this.getActivity())
 

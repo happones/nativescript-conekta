@@ -1,8 +1,8 @@
 import { Observable } from 'tns-core-modules/data/observable';
-import { Conekta } from 'nativescript-conekta';
+import { TNSConekta } from 'nativescript-conekta';
 
 export class HelloWorldModel extends Observable {
-  public conekta: Conekta;
+  public conekta: TNSConekta;
   private card = {
     name: 'John Doe',
       number: '4242424242424242',
@@ -15,11 +15,11 @@ export class HelloWorldModel extends Observable {
 
   constructor() {
     super();
-    this.conekta = new Conekta();
+    this.conekta = new TNSConekta();
     // set apikey for conekta
-    this.conekta.setPublicKey('your_key')
+    this.conekta.setPublicKey('your_public_key')
       // ser language
-      // this.conekta.setLanguage('you_lang')// Optional
+      // this.conekta.setLanguage('you_lang')// Optional only android
   }
 
 }

@@ -1,12 +1,35 @@
 <Page xmlns="http://schemas.nativescript.org/tns.xsd" loaded="pageLoaded" class="page">
-  <StackLayout class="p-20">
-    <Label text="Exmaple form for card"/>
-    <TextField text="{{ card.name }}" hint="Titular Name"/>
-    <TextField text="{{ card.number }}" hint="Number Card" keyboardType="number" maxLength="16"/>
-    <TextField text="{{ card.cvc }}" hint="CVC" keyboardType="number" maxLength="4"/>
-    <TextField text="{{ card.expiry_month }}" hint="Month Expiry" keyboardType="number" maxLength="2"/>
-    <TextField text="{{ card.expiry_year }}" hint="Year Expiry" keyboardType="number" maxLength="2"/>
-    <Button text="Create Token" tap="generateToken"/>
-    <Label text="{{ 'Your token is: ' + token }}"/>
-  </StackLayout>
+  <GridLayout padding="20">
+
+    <ScrollView>
+      <StackLayout>
+        <StackLayout class="form">
+          <StackLayout>
+            <Label text="Example form for card"/>
+          </StackLayout>
+          <StackLayout>
+            <TextField text="{{ card.name }}" hint="Titular Name" class="input input-border"/>
+          </StackLayout>
+          <StackLayout>
+            <TextField text="{{ card.number }}" hint="Number Card" keyboardType="number" maxLength="16" class="input input-border"/>
+          </StackLayout>
+          <StackLayout>
+            <TextField text="{{ card.cvc }}" hint="CVC" keyboardType="number" maxLength="4" class="input input-border"/>
+          </StackLayout>
+          <StackLayout>
+            <TextField text="{{ card.expiry_month }}" hint="Month Expiry" keyboardType="number" maxLength="2" class="input input-border"/>
+          </StackLayout>
+          <StackLayout>
+            <TextField text="{{ card.expiry_year }}" hint="Year Expiry" keyboardType="number" maxLength="2" class="input input-border"/>
+          </StackLayout>
+          <StackLayout>
+            <Button text="Create  ssToken" tap="generateToken" class="btn btn-primary w-full"/>
+          </StackLayout>
+          <StackLayout>
+            <Label text="{{ 'Your token is: ' + token }}" textWrap="true"/>
+          </StackLayout>
+        </StackLayout>
+      </StackLayout>
+    </ScrollView>
+  </GridLayout>
 </Page>

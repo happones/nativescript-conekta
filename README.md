@@ -1,35 +1,44 @@
 # Nativescript Conekta Sdk
 
-This is the first version of the plugin, for the moment it only works on android and much to improve
+Works on ios and android
 
 ## Installation
 
-As soon as I can I'll upload it to npm in order to use the following command:
+Install with following command:
 
-```javascript
-tns plugin add nativescript-conekta
+```
+tns plugin add nativescript-conekta-sdk
+// or
+npm i nativescript-conekta-sdk
 ```
 So while cloning from the repo
-## Usage 
+## Usage
+TypeScript
+```Typescript
+import { TNSConekta } from 'nativescript-conekta-sdk'
+
+private conekta: TNSConekta;
+
+this.conekta = new TNSConekta()
+
+this.conekta.setPublicKey('your_key')
 
 
-	
-	```javascript
-    import { Conekta } from 'nativescript-conekta'
-    // or 
-    const Conekta = require('native-script').Conekta
-    
-    private conekta: Conekta;
-    
-    this.conekta = new Conekta()
-            this.conekta.setPublicKey('your_key')
-            
-    this.conekta.setLanguage('you_lang')// Optional default es
-    
-    this.conekta.createToken(params) // Promise, params is required, (name, number, cvc, exp_month, exp_year)
-    
-     ```)
-    
+this.conekta.createToken(params) // Promise, params is required, (name, number, cvc, exp_month, exp_year)
+
+```
+JavaScript
+```Javascript
+const TNSConekta = require('nativescript-conekta-sdk').TNSConekta;
+
+const conekta = new TNSConekta()
+
+conekta.setPublicKey('your_key')
+conekta.setLanguage('en') // only in android
+conekta.createToken(params) // Promise, params is required, (name, number, cvc, exp_month, exp_year)
+
+```
+
 ## License
 
 Apache License Version 2.0, January 2004
