@@ -1,5 +1,5 @@
 import { Observable } from 'tns-core-modules/data/observable';
-import { TNSConekta } from 'nativescript-conekta';
+import { TNSConekta } from 'nativescript-conekta-sdk';
 
 export class HelloWorldModel extends Observable {
   public conekta: TNSConekta;

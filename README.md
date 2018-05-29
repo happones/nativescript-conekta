@@ -12,6 +12,10 @@ tns plugin add nativescript-conekta-sdk
 npm i nativescript-conekta-sdk
 ```
 So while cloning from the repo
+
+![NativeScript demo android](https://github.com/happones/nativescript-conekta-sdk/blob/master/screenshots/android.png?raw=true)
+
+![NativeScript demo ios](https://github.com/happones/nativescript-conekta-sdk/blob/master/screenshots/ios.png?raw=true)
 ## Usage
 TypeScript
 ```Typescript
