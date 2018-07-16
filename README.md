@@ -43,6 +43,22 @@ conekta.createToken(params) // Promise, params is required, (name, number, cvc, 
 
 ```
 
+Handle errors
+
+JavaScript
+```Javascript
+conekta.createToken(params).then(success => {
+    // your success function
+}).catch(error => {
+    alert(error.message_to_purchaser)
+}) // Promise, params is required, (name, number, cvc, exp_month, exp_year)
+
+```
+
+**Wants card validation**
+
+Use this plugin [Credit Card Validator ](https://github.com/braintree/card-validator)
+
 ## License
 
 Apache License Version 2.0, January 2004

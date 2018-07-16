@@ -13,10 +13,12 @@ export function generateToken(args) {
     let object = args.object.bindingContext;
     let module  = new HelloWorldModel();
     module.conekta.createToken(object.card).then(response => {
+        console.dir(response)
         alert('success: ' + JSON.stringify(response));
         args.object.bindingContext.set('token', response.id)
     }, error => {
-        alert('error: ' + JSON.stringify(error));
+        console.dir(error)
+        alert(error.message_to_purchaser)
     })
 
 }
